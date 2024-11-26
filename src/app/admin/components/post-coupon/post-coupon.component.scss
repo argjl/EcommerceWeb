@@ -1,0 +1,94 @@
+// Variables for colors
+$primary-color: #3f51b5;
+$accent-color: #f50057;
+$error-color: #e53935;
+$background-color: #f9f9f9;
+
+// General container styling
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: $background-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $primary-color;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+  }
+}
+
+// Styling for form fields
+.form-fiels {
+  width: 100%;
+  margin-bottom: 1.2em;
+
+  mat-form-field {
+    width: 100%;
+    transition: all 0.3s ease;
+
+    .mat-form-field-outline {
+      border-color: rgba($primary-color, 0.5);
+    }
+
+    .mat-label {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .mat-hint {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 0.85rem;
+    }
+
+    .mat-error {
+      color: $error-color;
+      font-size: 0.85rem;
+    }
+
+    input {
+      &:focus {
+        border-color: $accent-color;
+      }
+    }
+  }
+}
+
+// Button styling
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: $primary-color;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:disabled {
+    background-color: lighten($primary-color, 30%);
+    cursor: not-allowed;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .mat-form-field {
+    font-size: 0.9rem;
+  }
+}

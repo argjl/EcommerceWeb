@@ -1,0 +1,75 @@
+// Colors and spacing variables
+$primary-color: #3f51b5;
+$table-border-color: rgba(0, 0, 0, 0.1);
+$background-color: #f9f9f9;
+$text-color: #333;
+
+// Main container styling
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: $background-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Material card styling
+mat-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  mat-card-content {
+    padding: 0;
+  }
+}
+
+// Table styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  // Header cell styling
+  th.mat-header-cell {
+    color: $primary-color;
+    font-weight: 600;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid $table-border-color;
+    background-color: rgba($primary-color, 0.1);
+  }
+
+  // Data cell styling
+  td.mat-cell {
+    color: $text-color;
+    padding: 12px;
+    border-bottom: 1px solid $table-border-color;
+    font-size: 0.95rem;
+  }
+
+  // Row styling with hover effect
+  tr.mat-row {
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  table {
+    th.mat-header-cell,
+    td.mat-cell {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+}

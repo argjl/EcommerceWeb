@@ -1,0 +1,87 @@
+// Define color variables for reuse
+$header-color: #003973;
+$cell-font-weight: 600;
+
+// Table container styling
+.mat-elevation-z8 {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+// Header cell styling
+.mat-header-cell {
+    font-weight: bold;
+    color: $header-color;
+    background-color: #f5f5f5;
+    padding: 12px;
+    text-align: left;
+
+    // Add border to separate columns
+    &:not(:last-child) {
+        border-right: 1px solid #e0e0e0;
+    }
+}
+
+// Row cell styling
+.mat-cell {
+    padding: 12px;
+    font-weight: $cell-font-weight;
+    color: #333;
+
+    &.amount {
+        color: #2e7d32;
+        font-weight: bold;
+    }
+}
+
+// Alternate row background color for better readability
+.mat-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+// Hover effect on rows
+.mat-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+// Status-specific styling for order status column
+.mat-cell.status {
+    &.completed {
+        color: #2e7d32; // Green for completed
+    }
+    &.pending {
+        color: #ff9800; // Orange for pending
+    }
+    &.canceled {
+        color: #d32f2f; // Red for canceled
+    }
+}
+
+// Style for empty action cells
+.mat-cell.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Add button styles if there are action buttons later
+    button {
+        margin: 0 4px;
+        color: $header-color;
+    }
+}
+
+// Customize the date display
+.mat-cell.date {
+    font-style: italic;
+    color: #555;
+}
+
+// Additional styling for table responsiveness
+@media (max-width: 768px) {
+    .mat-table {
+        font-size: 14px;
+    }
+    .mat-header-cell, .mat-cell {
+        padding: 8px;
+    }
+}

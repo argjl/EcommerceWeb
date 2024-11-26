@@ -1,0 +1,91 @@
+.analytics-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+
+    .analytics-card {
+        width: 300px;
+        max-width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: #fff;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        mat-card-header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 8px 8px 0 0;
+
+            .metric-avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: #fff;
+                background-color: #3f51b5; /* Change this color for different metrics if needed */
+            }
+
+            mat-card-title {
+                font-size: 20px;
+                font-weight: bold;
+                color: #333;
+                margin-left: 15px;
+            }
+        }
+
+        mat-card-content {
+            padding: 20px;
+            text-align: center;
+
+            .metric-value {
+                font-size: 28px;
+                font-weight: bold;
+                color: #3f51b5; /* Same as avatar for consistency */
+            }
+
+            .metric-subtext {
+                font-size: 14px;
+                font-weight: normal;
+                color: #666;
+            }
+
+            &.previous-month {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #e0e0e0;
+
+                .metric-value {
+                    font-size: 24px;
+                    color: #ff9800; /* Different color for previous month */
+                }
+            }
+        }
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .analytics-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .analytics-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

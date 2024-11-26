@@ -1,0 +1,79 @@
+// Container styling for form layout
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    h2 {
+        text-align: center;
+        color: #003973;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+// Form field styling
+.form-field {
+    width: 100%;
+    margin-bottom: 16px;
+
+    // Outline style for form field
+    .mat-form-field-outline {
+        border-color: #003973;
+    }
+
+    // Label styling
+    .mat-form-field-label {
+        color: #003973;
+        font-weight: 500;
+    }
+
+    // Input field styling
+    input.mat-input-element {
+        font-size: 16px;
+        padding: 10px;
+        color: #333;
+    }
+}
+
+// Error message styling
+.mat-error {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+// Button styling within the form
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #003973;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #002d73;
+    }
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    .form-field {
+        margin-bottom: 12px;
+    }
+    button[type="submit"] {
+        padding: 10px;
+    }
+}

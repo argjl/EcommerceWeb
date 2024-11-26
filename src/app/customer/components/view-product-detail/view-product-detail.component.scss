@@ -1,0 +1,118 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+  }
+  
+  .product-card,
+  .review-card,
+  .faq-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 16px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-image,
+  .review-image {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .product-image img,
+  .review-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-details,
+  .review-details,
+  .faq-details {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .product-details h2,
+  .review-details h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p,
+  .review-details p,
+  .faq-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .price,
+  .category,
+  .rating,
+  .username,
+  .question,
+  .answer {
+    font-weight: bold;
+  }
+  
+  .small-image {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin: 40px 0 20px;
+  }
+  
+  .review-list,
+  .faq-list {
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+  
+  .faq-details .question-text,
+  .faq-details .answer-text {
+    font-style: italic;
+  }
+  
+  .faq-card {
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .details-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .center-container {
+      flex-direction: column;
+    }
+  
+    .product-card,
+    .review-card,
+    .faq-card {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+.order-status-container {
+    display: flex;
+    justify-content: space-between; /* Ensures cards are spaced evenly */
+    align-items: flex-start;
+    gap: 20px; /* Adds space between cards */
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    background-color: #f9f9f9;
+
+    /* Ensure cards align side by side on wider screens */
+    @media (min-width: 769px) {
+        justify-content: space-around;
+    }
+}
+
+.order-status-card {
+    flex: 1 1 250px; /* Makes cards flexible while maintaining a minimum width */
+    max-width: 300px; /* Restricts the maximum size of each card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    mat-card-header {
+        display: flex;
+        align-items: center;
+        background-color: #f4f4f4;
+        padding: 10px 15px;
+        border-radius: 8px 8px 0 0;
+
+        .status-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3f51b5;
+        }
+
+        mat-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 10px;
+        }
+    }
+
+    mat-card-content {
+        padding: 20px;
+        text-align: center;
+
+        .status-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3f51b5;
+        }
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .order-status-container {
+        justify-content: center; /* Centers cards on smaller screens */
+    }
+
+    .order-status-card {
+        flex: 1 1 90%; /* Cards take up 90% of the width on smaller screens */
+        max-width: none; /* Removes the max-width restriction for better responsiveness */
+        margin-bottom: 20px;
+    }
+}
